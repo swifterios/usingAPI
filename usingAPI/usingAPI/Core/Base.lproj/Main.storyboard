@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R2U-jt-cnf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="usingAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNz-eo-MIb">
+                                <rect key="frame" x="122" y="408" width="170" height="80"/>
+                                <color key="backgroundColor" red="0.14901961389999999" green="0.1215686351" blue="0.20784312490000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="FIG-qS-5AV"/>
+                                    <constraint firstAttribute="width" constant="170" id="Yaj-5U-W6C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Posts">
+                                    <color key="titleColor" red="0.42745098469999998" green="0.2823529541" blue="0.93333339689999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="postsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xBd-0M-0fU"/>
+                                    <segue destination="6da-I5-p6m" kind="show" id="AGj-a5-60n"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.078431375319999996" green="0.062745101750000004" blue="0.1019607931" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="bNz-eo-MIb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CfZ-zT-fsT"/>
+                            <constraint firstItem="bNz-eo-MIb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="R0p-lg-X0C"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fRU-qK-CWf"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nf6-vV-uYb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R2U-jt-cnf" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bg5-OM-K80">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fTo-Ky-24V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bte-FX-FZS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RVa-MB-iR1">
+            <objects>
+                <viewController id="6da-I5-p6m" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BtK-9a-Beg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3G5-Zt-U0x">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DSc-Cv-dV1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DSc-Cv-dV1" firstAttribute="trailing" secondItem="3G5-Zt-U0x" secondAttribute="trailing" id="4C9-iD-GHl"/>
+                            <constraint firstItem="DSc-Cv-dV1" firstAttribute="bottom" secondItem="3G5-Zt-U0x" secondAttribute="bottom" id="5UK-GE-heh"/>
+                            <constraint firstItem="3G5-Zt-U0x" firstAttribute="leading" secondItem="DSc-Cv-dV1" secondAttribute="leading" id="qeW-3l-H2U"/>
+                            <constraint firstItem="3G5-Zt-U0x" firstAttribute="top" secondItem="DSc-Cv-dV1" secondAttribute="top" id="ruP-ls-u5Z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="9vU-VL-pCW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PRq-qX-vbU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1948" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
