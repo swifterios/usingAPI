@@ -9,20 +9,23 @@
 /* Begin PBXBuildFile section */
 		ECBC0964269AEDEC00A900C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0963269AEDEC00A900C0 /* AppDelegate.swift */; };
 		ECBC0966269AEDEC00A900C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0965269AEDEC00A900C0 /* SceneDelegate.swift */; };
-		ECBC0968269AEDEC00A900C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0967269AEDEC00A900C0 /* ViewController.swift */; };
+		ECBC0968269AEDEC00A900C0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0967269AEDEC00A900C0 /* MainScreenViewController.swift */; };
 		ECBC096B269AEDEC00A900C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBC0969269AEDEC00A900C0 /* Main.storyboard */; };
 		ECBC096D269AEDEE00A900C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECBC096C269AEDEE00A900C0 /* Assets.xcassets */; };
 		ECBC0970269AEDEE00A900C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECBC096E269AEDEE00A900C0 /* LaunchScreen.storyboard */; };
 		ECBC097E269AFFAE00A900C0 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC097D269AFFAE00A900C0 /* PostsService.swift */; };
 		ECBC0981269B02BB00A900C0 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0980269B02BB00A900C0 /* Post.swift */; };
 		ECBC0983269C1F6100A900C0 /* APIType.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0982269C1F6100A900C0 /* APIType.swift */; };
+		ECBC0987269C281900A900C0 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0986269C281900A900C0 /* PostsViewController.swift */; };
+		ECBC098D269C380100A900C0 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC098B269C380100A900C0 /* PostsTableViewCell.swift */; };
+		ECBC098E269C380100A900C0 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECBC098C269C380100A900C0 /* PostsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		ECBC0960269AEDEC00A900C0 /* usingAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usingAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBC0963269AEDEC00A900C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBC0965269AEDEC00A900C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ECBC0967269AEDEC00A900C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ECBC0967269AEDEC00A900C0 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		ECBC096A269AEDEC00A900C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ECBC096C269AEDEE00A900C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECBC096F269AEDEE00A900C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		ECBC097D269AFFAE00A900C0 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		ECBC0980269B02BB00A900C0 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		ECBC0982269C1F6100A900C0 /* APIType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIType.swift; sourceTree = "<group>"; };
+		ECBC0986269C281900A900C0 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		ECBC098B269C380100A900C0 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		ECBC098C269C380100A900C0 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +124,29 @@
 		ECBC097F269AFFB700A900C0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				ECBC0967269AEDEC00A900C0 /* ViewController.swift */,
+				ECBC0988269C377600A900C0 /* Posts */,
+				ECBC0967269AEDEC00A900C0 /* MainScreenViewController.swift */,
 				ECBC0969269AEDEC00A900C0 /* Main.storyboard */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		ECBC0988269C377600A900C0 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				ECBC098F269C380B00A900C0 /* Xib */,
+				ECBC0986269C281900A900C0 /* PostsViewController.swift */,
+				ECBC098B269C380100A900C0 /* PostsTableViewCell.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		ECBC098F269C380B00A900C0 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				ECBC098C269C380100A900C0 /* PostsTableViewCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +209,7 @@
 				ECBC0970269AEDEE00A900C0 /* LaunchScreen.storyboard in Resources */,
 				ECBC096D269AEDEE00A900C0 /* Assets.xcassets in Resources */,
 				ECBC096B269AEDEC00A900C0 /* Main.storyboard in Resources */,
+				ECBC098E269C380100A900C0 /* PostsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,12 +220,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECBC0968269AEDEC00A900C0 /* ViewController.swift in Sources */,
+				ECBC0987269C281900A900C0 /* PostsViewController.swift in Sources */,
+				ECBC0968269AEDEC00A900C0 /* MainScreenViewController.swift in Sources */,
 				ECBC0964269AEDEC00A900C0 /* AppDelegate.swift in Sources */,
 				ECBC0966269AEDEC00A900C0 /* SceneDelegate.swift in Sources */,
 				ECBC097E269AFFAE00A900C0 /* PostsService.swift in Sources */,
 				ECBC0983269C1F6100A900C0 /* APIType.swift in Sources */,
 				ECBC0981269B02BB00A900C0 /* Post.swift in Sources */,
+				ECBC098D269C380100A900C0 /* PostsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
