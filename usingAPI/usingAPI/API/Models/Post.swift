@@ -7,9 +7,12 @@
 
 import Foundation
 
-struct Post {
-    let userid: Int?
+
+struct Post: Codable {
+    let userId: Int?
     let id: Int?
     let title: String?
     let body: String?
 }
+
+typealias Posts = [Post]

@@ -16,7 +16,10 @@ class ViewController: UIViewController {
 
 
     @IBAction func postsButton(_ sender: Any) {
-        PostsService.shared.getPosts()
+         
+        PostsService.shared.getPosts { posts in
+            
+        }
     }
 }
 
