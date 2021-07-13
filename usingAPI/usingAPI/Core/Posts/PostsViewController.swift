@@ -56,10 +56,10 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
             cell.textBodyLabel.text = postsData[index].body
         }
         
-        cell.layer.borderWidth = 1
-        cell.layer.borderColor = #colorLiteral(red: 0.4525717497, green: 0.2742630839, blue: 0.9688859582, alpha: 1)
-        cell.layer.cornerRadius = 15
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
     }
 }
