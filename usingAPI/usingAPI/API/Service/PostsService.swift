@@ -23,7 +23,6 @@ class PostsService {
                 completion([])
             }
         }
-        
         task.resume()
     }
     

@@ -52,14 +52,14 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         let index = indexPath.row
         
         if let postsData = postsData {
-            cell.titleLabel.text = postsData[index].title
+            cell.titleLabel.text = postsData[index].title?.uppercased()
             cell.textBodyLabel.text = postsData[index].body
         }
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200.0
-    }
+//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        return 300
+//    }
 }
