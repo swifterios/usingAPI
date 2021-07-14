@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC2F8A92269EE1170067198D /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2F8A91269EE1170067198D /* PostsTableViewCell.swift */; };
+		EC45C3B0269F72E700716166 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC45C3AF269F72E700716166 /* Comment.swift */; };
 		ECBC0964269AEDEC00A900C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0963269AEDEC00A900C0 /* AppDelegate.swift */; };
 		ECBC0966269AEDEC00A900C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0965269AEDEC00A900C0 /* SceneDelegate.swift */; };
 		ECBC0968269AEDEC00A900C0 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECBC0967269AEDEC00A900C0 /* MainScreenViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		EC2F8A91269EE1170067198D /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		EC45C3AF269F72E700716166 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		ECBC0960269AEDEC00A900C0 /* usingAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = usingAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECBC0963269AEDEC00A900C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECBC0965269AEDEC00A900C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				ECBC0980269B02BB00A900C0 /* Post.swift */,
+				EC45C3AF269F72E700716166 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				ECBC097E269AFFAE00A900C0 /* PostsService.swift in Sources */,
 				ECBC0983269C1F6100A900C0 /* APIType.swift in Sources */,
 				ECBC0981269B02BB00A900C0 /* Post.swift in Sources */,
+				EC45C3B0269F72E700716166 /* Comment.swift in Sources */,
 				EC2F8A92269EE1170067198D /* PostsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
