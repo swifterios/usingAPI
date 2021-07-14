@@ -11,7 +11,6 @@ class PostsService {
     
     static let shared = PostsService()
     
-    
     func getPosts(completion: @escaping (Posts) -> Void) {
         let request = APIType.getPosts.request
         
@@ -25,5 +24,4 @@ class PostsService {
         }
         task.resume()
     }
-    
 }
