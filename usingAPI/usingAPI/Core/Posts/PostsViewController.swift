@@ -9,7 +9,10 @@ import UIKit
 
 class PostsViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - Outlets
+    
     @IBOutlet weak var postsTableView: UITableView!
+    
     var postsData:Posts?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -21,8 +24,7 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "PostsTableViewCell", bundle: nil)
-        postsTableView.register(nib, forCellReuseIdentifier: "PostsTableViewCell")
+        
         postsTableView.dataSource = self
         postsTableView.delegate = self
     }
@@ -58,8 +60,4 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 300
-//    }
 }
