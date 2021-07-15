@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -101,6 +102,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX3-0u-jnm">
                                                     <rect key="frame" x="311" y="112.5" width="88" height="39.5"/>
                                                     <state key="normal" title="Comments &gt;"/>
+                                                    <connections>
+                                                        <segue destination="ql2-l7-91G" kind="show" id="l4O-L8-aBn"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text text text text text text text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YzR-G8-Ezk">
                                                     <rect key="frame" x="15" y="65" width="384" height="19.5"/>
@@ -148,5 +152,90 @@
             </objects>
             <point key="canvasLocation" x="1947.826086956522" y="75"/>
         </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="7MP-Pl-6dc">
+            <objects>
+                <viewController id="ql2-l7-91G" customClass="CommentsViewController" customModule="usingAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GtW-KW-GNC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="m7K-1Z-zmS">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="CommentsTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="148" id="U7e-ey-DUt" customClass="CommentsTableViewCell" customModule="usingAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="148"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U7e-ey-DUt" id="9jA-xT-qJN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-TV-PcO">
+                                                    <rect key="frame" x="35" y="21" width="344" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-NI-RRg">
+                                                    <rect key="frame" x="35" y="47" width="344" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-0n-F5U">
+                                                    <rect key="frame" x="35" y="79" width="344" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FWr-NI-RRg" secondAttribute="trailing" constant="15" id="9RE-gK-mwC"/>
+                                                <constraint firstItem="FWr-NI-RRg" firstAttribute="top" secondItem="CwG-TV-PcO" secondAttribute="bottom" constant="5" id="Cbb-Ms-fcK"/>
+                                                <constraint firstItem="CwG-TV-PcO" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leadingMargin" constant="15" id="DIC-Qw-rMq"/>
+                                                <constraint firstItem="e4t-0n-F5U" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leadingMargin" constant="15" id="FZb-FD-ZGn"/>
+                                                <constraint firstItem="FWr-NI-RRg" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leadingMargin" constant="15" id="Il7-qO-hMy"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="e4t-0n-F5U" secondAttribute="trailing" constant="15" id="Jbk-Iu-MHh"/>
+                                                <constraint firstItem="CwG-TV-PcO" firstAttribute="top" secondItem="9jA-xT-qJN" secondAttribute="topMargin" constant="10" id="bM1-lU-uEJ"/>
+                                                <constraint firstItem="e4t-0n-F5U" firstAttribute="top" secondItem="FWr-NI-RRg" secondAttribute="bottom" constant="15" id="j9L-Rb-wTx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CwG-TV-PcO" secondAttribute="trailing" constant="15" id="pnC-4v-e1A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="e4t-0n-F5U" id="K3t-EW-okd"/>
+                                            <outlet property="emailLabel" destination="FWr-NI-RRg" id="hPR-Sp-v7g"/>
+                                            <outlet property="nameLabel" destination="CwG-TV-PcO" id="ReH-Ko-CKT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MJU-Yi-oEC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m7K-1Z-zmS" firstAttribute="top" secondItem="MJU-Yi-oEC" secondAttribute="top" id="3kM-Rx-Tz3"/>
+                            <constraint firstItem="MJU-Yi-oEC" firstAttribute="bottom" secondItem="m7K-1Z-zmS" secondAttribute="bottom" id="8cJ-Oo-yda"/>
+                            <constraint firstItem="MJU-Yi-oEC" firstAttribute="trailing" secondItem="m7K-1Z-zmS" secondAttribute="trailing" id="viw-ML-Y4F"/>
+                            <constraint firstItem="m7K-1Z-zmS" firstAttribute="leading" secondItem="MJU-Yi-oEC" secondAttribute="leading" id="zAx-CG-yyc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IAh-MT-GHI"/>
+                    <connections>
+                        <outlet property="commentsTableView" destination="m7K-1Z-zmS" id="T3M-eq-9Sj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XUM-G8-Gaw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3076.811594202899" y="75"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
