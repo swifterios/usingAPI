@@ -30,7 +30,7 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
     }
     
     func getPosts() {
-        PostsService.shared.getPosts { posts in
+        APIService.shared.getPosts { posts in
             self.postsData = posts
             self.updateTableView()
         }

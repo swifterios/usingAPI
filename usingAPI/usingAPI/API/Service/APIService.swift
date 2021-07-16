@@ -1,5 +1,5 @@
 //
-//  PostsService.swift
+//  APIService.swift
 //  usingAPI
 //
 //  Created by Владислав on 11.07.2021.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-class PostsService {
+class APIService {
     
-    static let shared = PostsService()
+    static let shared = APIService()
     
     func getPosts(completion: @escaping (Posts) -> Void) {
         let request = APIType.getPosts.request

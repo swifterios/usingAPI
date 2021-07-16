@@ -20,6 +20,10 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
         commentsTableView.delegate = self
     }
     
+    func getComments() {
+        
+    }
+    
     
     //MARK: - TableView functions
     
