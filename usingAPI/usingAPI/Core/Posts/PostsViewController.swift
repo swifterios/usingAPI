@@ -9,11 +9,11 @@ import UIKit
 
 class PostsViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var postsData: Posts?
+    
     //MARK: - Outlets
     
     @IBOutlet weak var postsTableView: UITableView!
-    
-    var postsData:Posts?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -24,21 +24,20 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         postsTableView.dataSource = self
         postsTableView.delegate = self
     }
     
     func getPosts() {
-        PostsService.shared.getPosts { posts in
-            self.postsData = posts
-            self.updateTableView()
+        APIService.shared.getPosts { [weak self] posts in
+            self?.postsData = posts
+            self?.updateTableView()
         }
     }
     
     func updateTableView() {
-        DispatchQueue.main.async {
-            self.postsTableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.postsTableView.reloadData()
         }
     }
 
@@ -51,6 +50,7 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
+        
         let index = indexPath.row
         
         if let postsData = postsData {
