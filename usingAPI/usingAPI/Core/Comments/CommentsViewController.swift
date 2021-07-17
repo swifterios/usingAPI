@@ -18,7 +18,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getComments()
+        getCommentsById()
     }
     
     override func viewDidLoad() {
@@ -28,7 +28,8 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
         commentsTableView.delegate = self
     }
     
-    func getComments() { 
+    func getCommentsById() {
+        
         APIService.shared.getComments { [weak self] comments in
             self?.commentsData = comments
             self?.updateTableView()
