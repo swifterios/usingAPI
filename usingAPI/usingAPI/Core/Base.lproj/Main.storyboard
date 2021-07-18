@@ -171,45 +171,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5hG-LM-RrJ">
-                                                    <rect key="frame" x="15" y="15" width="384" height="118"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CwG-TV-PcO">
-                                                            <rect key="frame" x="0.0" y="0.0" width="45" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FWr-NI-RRg">
-                                                            <rect key="frame" x="0.0" y="20.5" width="34.5" height="17"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" systemColor="systemGray2Color"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Comment " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4t-0n-F5U">
-                                                            <rect key="frame" x="0.0" y="37.5" width="384" height="80.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="e4t-0n-F5U" secondAttribute="trailing" id="9tp-UR-XNj"/>
-                                                        <constraint firstItem="e4t-0n-F5U" firstAttribute="leading" secondItem="5hG-LM-RrJ" secondAttribute="leading" id="os8-0B-27g"/>
-                                                    </constraints>
-                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-P7-yzd">
+                                                    <rect key="frame" x="15" y="15" width="384" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tly-fN-wOO">
+                                                    <rect key="frame" x="15" y="51" width="384" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2C-7C-G1f">
+                                                    <rect key="frame" x="15" y="87" width="384" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5hG-LM-RrJ" firstAttribute="top" secondItem="9jA-xT-qJN" secondAttribute="top" constant="15" id="59w-tS-wrz"/>
-                                                <constraint firstItem="5hG-LM-RrJ" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="Dm5-sN-HKj"/>
-                                                <constraint firstAttribute="trailing" secondItem="5hG-LM-RrJ" secondAttribute="trailing" constant="15" id="hEi-KG-SJC"/>
-                                                <constraint firstAttribute="bottom" secondItem="5hG-LM-RrJ" secondAttribute="bottom" constant="15" id="uem-uj-qdj"/>
+                                                <constraint firstItem="tly-fN-wOO" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="3bk-uf-eiU"/>
+                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="top" secondItem="9jA-xT-qJN" secondAttribute="top" constant="15" id="3pL-xg-pWW"/>
+                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="top" secondItem="tly-fN-wOO" secondAttribute="bottom" constant="15" id="7Oa-t8-JSP"/>
+                                                <constraint firstAttribute="trailing" secondItem="F2C-7C-G1f" secondAttribute="trailing" constant="15" id="I0u-mm-02Q"/>
+                                                <constraint firstAttribute="trailing" secondItem="tly-fN-wOO" secondAttribute="trailing" constant="15" id="Mi8-E9-T24"/>
+                                                <constraint firstAttribute="trailing" secondItem="S7P-P7-yzd" secondAttribute="trailing" constant="15" id="VJJ-37-7pf"/>
+                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="W8Y-7s-8Ij"/>
+                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="top" secondItem="tly-fN-wOO" secondAttribute="bottom" constant="15" id="dGF-0L-75I"/>
+                                                <constraint firstItem="tly-fN-wOO" firstAttribute="top" secondItem="S7P-P7-yzd" secondAttribute="bottom" constant="15" id="ezC-9i-RGd"/>
+                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="i2A-2j-gRS"/>
+                                                <constraint firstItem="tly-fN-wOO" firstAttribute="top" secondItem="S7P-P7-yzd" secondAttribute="bottom" constant="15" id="rCy-kq-883"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="commentLabel" destination="e4t-0n-F5U" id="K3t-EW-okd"/>
-                                            <outlet property="emailLabel" destination="FWr-NI-RRg" id="hPR-Sp-v7g"/>
-                                            <outlet property="nameLabel" destination="CwG-TV-PcO" id="ReH-Ko-CKT"/>
+                                            <outlet property="commentsLabel" destination="F2C-7C-G1f" id="kCt-ey-p5t"/>
+                                            <outlet property="emailLabel" destination="tly-fN-wOO" id="Gfl-ka-cf5"/>
+                                            <outlet property="nameLabel" destination="S7P-P7-yzd" id="A8v-Cd-DIg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -238,9 +236,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

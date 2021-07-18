@@ -11,10 +11,10 @@ class APIService {
     
     static let shared = APIService()
     
-    var request = APIType.getPosts.request
-    
     func getPosts(completion: @escaping (Posts) -> Void) {
 
+        let request = APIType.getPosts.request
+        
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data,
                let posts = try? JSONDecoder().decode(Posts.self, from: data) {
@@ -26,7 +26,10 @@ class APIService {
         task.resume()
     }
     
-    func getComments(completion: @escaping (Comments) -> Void) {
+    func getCommentsById(postId: String, completion: @escaping (Comments) -> Void) {
+        
+        var request = APIType.getCommentsByPostId.request
+        request.allHTTPHeaderFields = ["postId" : postId]
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data,

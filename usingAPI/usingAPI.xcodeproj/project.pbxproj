@@ -56,8 +56,8 @@
 		EC8F9984269DB9500095E75D /* Comments */ = {
 			isa = PBXGroup;
 			children = (
-				EC45C3B1269F750000716166 /* CommentsTableViewCell.swift */,
 				EC45C3B3269F75B000716166 /* CommentsViewController.swift */,
+				EC45C3B1269F750000716166 /* CommentsTableViewCell.swift */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
