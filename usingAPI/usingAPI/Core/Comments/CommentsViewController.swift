@@ -18,7 +18,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getCommentsById()
+        getCommentsById(postId: "")
     }
     
     override func viewDidLoad() {
@@ -28,9 +28,8 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
         commentsTableView.delegate = self
     }
     
-    func getCommentsById() {
-        
-        APIService.shared.getComments { [weak self] comments in
+    func getCommentsById(postId: String) {
+        APIService.shared.getCommentsById(postId: "0") { [weak self] comments in
             self?.commentsData = comments
             self?.updateTableView()
         }
@@ -57,7 +56,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
         if let commentsData = commentsData {
             cell.nameLabel.text = commentsData[index].name
             cell.emailLabel.text = commentsData[index].email
-            cell.commentLabel.text = commentsData[index].body
+            cell.commentsLabel.text = commentsData[index].body
         }
         
         return cell
