@@ -10,6 +10,7 @@ import UIKit
 class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
     var commentsData: Comments?
+    var commentId: String?
     
     //MARK: - Outlets
     
@@ -18,7 +19,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getCommentsById(postId: "")
+        getCommentsById(postId: commentId)
     }
     
     override func viewDidLoad() {
@@ -28,10 +29,12 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
         commentsTableView.delegate = self
     }
     
-    func getCommentsById(postId: String) {
-        APIService.shared.getCommentsById(postId: "0") { [weak self] comments in
-            self?.commentsData = comments
-            self?.updateTableView()
+    func getCommentsById(postId: String?) {
+        if let postId = postId {
+            APIService.shared.getCommentsById(postId: postId) { [weak self] comments in
+                self?.commentsData = comments
+                self?.updateTableView()
+            }
         }
     }
     

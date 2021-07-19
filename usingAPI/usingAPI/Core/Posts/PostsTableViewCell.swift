@@ -13,8 +13,8 @@ class PostsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textBodyLabel: UILabel!
+    @IBOutlet weak var commentsButton: UIButton!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,5 +25,5 @@ class PostsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
