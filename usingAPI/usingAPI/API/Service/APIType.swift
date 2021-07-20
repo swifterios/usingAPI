@@ -10,48 +10,37 @@ import Foundation
 enum APIType {
     case getPosts
     case getCommentsByPostId
-
     
-    var baseURL: URL {
-        return URL(string: "https://jsonplaceholder.typicode.com/")!
+    var scheme: String {
+        return "https"
     }
-
+    
+    var host: String {
+        return "jsonplaceholder.typicode.com"
+    }
     
     var path: String {
         
         switch self {
         case .getPosts:
-            return "posts"
+            return "/posts"
         
         case .getCommentsByPostId:
-            return "comments"
+            return "/comments"
         }
     }
     
-    var headers: [String: String] {
-        
-        switch self {
-        case .getPosts:
-            return [:]
-        case .getCommentsByPostId:
-            return ["postId": ""]
-            
-        }
+    var query: [URLQueryItem] {
+        return [URLQueryItem(name: "", value: "")]
     }
     
-    var request: URLRequest {
-        let url = URL(string: path, relativeTo: baseURL)
-        var request = URLRequest(url: url!)
-        request.allHTTPHeaderFields = headers
+    var url: URL? {
+        var components = URLComponents()
+        components.scheme = scheme
+        components.host = host
+        components.path = path
+        components.queryItems = query
         
-        switch self {
-        case .getPosts:
-            request.httpMethod = "GET"
-            return request
-            
-        case .getCommentsByPostId:
-            request.httpMethod = "GET"
-            return request
-        }
+        return components.url
     }
 }

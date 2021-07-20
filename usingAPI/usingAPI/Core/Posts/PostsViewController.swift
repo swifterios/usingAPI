@@ -10,6 +10,7 @@ import UIKit
 class PostsViewController: ViewController, UITableViewDataSource, UITableViewDelegate {
     
     var postsData: Posts?
+    var postId: String?
     
     //MARK: - Outlets
     
@@ -28,6 +29,13 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         postsTableView.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destVC = segue.destination as! CommentsViewController
+        destVC.postId = postId
+    }
+    
+    
+    
     func getPosts() {
         APIService.shared.getPosts { [weak self] posts in
             self?.postsData = posts
@@ -40,7 +48,12 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
             self?.postsTableView.reloadData()
         }
     }
-
+    
+    
+    @IBAction func openComments(_ sender: UIButton) {
+        postId = String(describing: sender.tag)
+    }
+    
     
 //    MARK: TableView functions
     
@@ -52,6 +65,7 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
         
         let index = indexPath.row
+        cell.commentsButton.tag = index + 1
         
         if let postsData = postsData {
             cell.titleLabel.text = postsData[index].title?.uppercased()
@@ -60,4 +74,5 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         
         return cell
     }
+    
 }
