@@ -10,7 +10,7 @@ import UIKit
 class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDataSource {
     
     var commentsData: Comments?
-    var commentId: String?
+    var postId: String?
     
     //MARK: - Outlets
     
@@ -19,7 +19,8 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        getCommentsById(postId: commentId)
+        getCommentsById(postId: postId)
+        
     }
     
     override func viewDidLoad() {
@@ -49,7 +50,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
     //MARK: - TableView functions
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return commentsData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

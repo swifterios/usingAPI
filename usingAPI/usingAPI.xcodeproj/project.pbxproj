@@ -149,8 +149,8 @@
 		ECBC0988269C377600A900C0 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
-				EC2F8A91269EE1170067198D /* PostsTableViewCell.swift */,
 				ECBC0986269C281900A900C0 /* PostsViewController.swift */,
+				EC2F8A91269EE1170067198D /* PostsTableViewCell.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";

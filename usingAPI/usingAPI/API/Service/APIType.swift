@@ -34,8 +34,7 @@ enum APIType {
         case .getPosts:
             return [:]
         case .getCommentsByPostId:
-            return ["postId": ""]
-            
+            return [:]
         }
     }
     

@@ -9,6 +9,8 @@ import UIKit
 
 class CommentsTableViewCell: UITableViewCell {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!

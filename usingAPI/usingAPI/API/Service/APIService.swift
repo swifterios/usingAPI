@@ -29,11 +29,12 @@ class APIService {
     func getCommentsById(postId: String, completion: @escaping (Comments) -> Void) {
         
         var request = APIType.getCommentsByPostId.request
-        request.allHTTPHeaderFields = ["postId" : postId]
+        request.addValue(postId, forHTTPHeaderField: "postId")
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data,
                let result = try? JSONDecoder().decode(Comments.self, from: data) {
+                
                 completion(result)
             } else {
                 completion([])

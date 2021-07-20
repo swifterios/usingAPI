@@ -31,8 +31,10 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destVC = segue.destination as! CommentsViewController
-        destVC.commentId = postId
+        destVC.postId = postId
     }
+    
+    
     
     func getPosts() {
         APIService.shared.getPosts { [weak self] posts in
@@ -63,7 +65,7 @@ class PostsViewController: ViewController, UITableViewDataSource, UITableViewDel
         let cell = postsTableView.dequeueReusableCell(withIdentifier: "PostsTableViewCell", for: indexPath) as! PostsTableViewCell
         
         let index = indexPath.row
-        cell.commentsButton.tag = index
+        cell.commentsButton.tag = index + 1
         
         if let postsData = postsData {
             cell.titleLabel.text = postsData[index].title?.uppercased()
