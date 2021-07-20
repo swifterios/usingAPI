@@ -13,9 +13,9 @@ class APIService {
     
     func getPosts(completion: @escaping (Posts) -> Void) {
 
-        let request = APIType.getPosts.request
+        let request = APIType.getPosts.url
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
             if let data = data,
                let posts = try? JSONDecoder().decode(Posts.self, from: data) {
                 completion(posts)
@@ -28,13 +28,13 @@ class APIService {
     
     func getCommentsById(postId: String, completion: @escaping (Comments) -> Void) {
         
-        var request = APIType.getCommentsByPostId.request
-        request.addValue(postId, forHTTPHeaderField: "postId")
+        var request = APIType.getCommentsByPostId.url
         
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+        
+        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
             if let data = data,
                let result = try? JSONDecoder().decode(Comments.self, from: data) {
-                
+
                 completion(result)
             } else {
                 completion([])
