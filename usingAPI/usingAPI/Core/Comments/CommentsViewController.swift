@@ -27,6 +27,7 @@ class CommentsViewController: ViewController, UITableViewDelegate, UITableViewDa
 
         commentsTableView.dataSource = self
         commentsTableView.delegate = self
+
     }
     
     func getCommentsById(postId: String?) {

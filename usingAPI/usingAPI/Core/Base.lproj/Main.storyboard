@@ -173,35 +173,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-P7-yzd">
-                                                    <rect key="frame" x="15" y="15" width="384" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S7P-P7-yzd">
+                                                    <rect key="frame" x="15" y="15" width="384" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tly-fN-wOO">
-                                                    <rect key="frame" x="15" y="41" width="384" height="14.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tly-fN-wOO">
+                                                    <rect key="frame" x="15" y="40.5" width="384" height="14.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2C-7C-G1f">
-                                                    <rect key="frame" x="35" y="111.5" width="344" height="21.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2C-7C-G1f">
+                                                    <rect key="frame" x="15" y="70" width="384" height="63"/>
                                                     <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="top" secondItem="9jA-xT-qJN" secondAttribute="top" constant="15" id="4q5-Md-lHG"/>
-                                                <constraint firstItem="tly-fN-wOO" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="ABJ-e8-jUy"/>
-                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="Emg-xW-M0I"/>
-                                                <constraint firstAttribute="trailing" secondItem="S7P-P7-yzd" secondAttribute="trailing" constant="15" id="LdG-Zp-WQE"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="F2C-7C-G1f" secondAttribute="trailing" constant="15" id="bNb-q2-TAh"/>
-                                                <constraint firstAttribute="trailing" secondItem="tly-fN-wOO" secondAttribute="trailing" constant="15" id="mN4-6E-2g6"/>
-                                                <constraint firstItem="tly-fN-wOO" firstAttribute="top" secondItem="S7P-P7-yzd" secondAttribute="bottom" constant="5" id="qcw-eI-2Yp"/>
-                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leadingMargin" constant="15" id="yB3-Zu-Iwm"/>
-                                                <constraint firstAttribute="bottom" secondItem="F2C-7C-G1f" secondAttribute="bottom" constant="15" id="z3u-jK-rpq"/>
+                                                <constraint firstAttribute="bottom" secondItem="F2C-7C-G1f" secondAttribute="bottom" constant="15" id="3sI-Cg-ZS2"/>
+                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="top" secondItem="9jA-xT-qJN" secondAttribute="top" constant="15" id="4wP-3i-5Qk"/>
+                                                <constraint firstItem="S7P-P7-yzd" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="9CH-au-kuD"/>
+                                                <constraint firstAttribute="trailing" secondItem="F2C-7C-G1f" secondAttribute="trailing" constant="15" id="ELg-cQ-nYb"/>
+                                                <constraint firstAttribute="trailing" secondItem="S7P-P7-yzd" secondAttribute="trailing" constant="15" id="Ew3-HO-8bR"/>
+                                                <constraint firstAttribute="trailing" secondItem="tly-fN-wOO" secondAttribute="trailing" constant="15" id="LT3-Iy-Hha"/>
+                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="top" secondItem="tly-fN-wOO" secondAttribute="bottom" constant="15" id="bKR-nV-Dhy"/>
+                                                <constraint firstItem="F2C-7C-G1f" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="dHX-er-uzP"/>
+                                                <constraint firstItem="tly-fN-wOO" firstAttribute="leading" secondItem="9jA-xT-qJN" secondAttribute="leading" constant="15" id="f8r-UT-mh0"/>
+                                                <constraint firstItem="tly-fN-wOO" firstAttribute="top" secondItem="S7P-P7-yzd" secondAttribute="bottom" constant="5" id="jhN-4p-wRX"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
