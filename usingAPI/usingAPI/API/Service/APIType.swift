@@ -10,6 +10,7 @@ import Foundation
 enum APIType {
     case getPosts
     case getCommentsByPostId
+    case defaultValues
     
     var scheme: String {
         return "https"
@@ -20,27 +21,15 @@ enum APIType {
     }
     
     var path: String {
-        
         switch self {
         case .getPosts:
             return "/posts"
         
         case .getCommentsByPostId:
             return "/comments"
+            
+        case .defaultValues:
+            return "/"
         }
-    }
-    
-    var query: [URLQueryItem] {
-        return [URLQueryItem(name: "", value: "")]
-    }
-    
-    var url: URL? {
-        var components = URLComponents()
-        components.scheme = scheme
-        components.host = host
-        components.path = path
-        components.queryItems = query
-        
-        return components.url
     }
 }

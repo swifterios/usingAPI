@@ -100,7 +100,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jX3-0u-jnm">
-                                                    <rect key="frame" x="311" y="112.5" width="88" height="39.5"/>
+                                                    <rect key="frame" x="15" y="112.5" width="384" height="39.5"/>
                                                     <state key="normal" title="Comments &gt;"/>
                                                     <connections>
                                                         <action selector="openComments:" destination="6da-I5-p6m" eventType="touchUpInside" id="GLm-z1-9nG"/>
@@ -121,6 +121,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="YzR-G8-Ezk" secondAttribute="trailing" constant="15" id="NvU-zD-GQF"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="S48-JW-ZGP" secondAttribute="trailing" constant="15" id="PbP-c1-25X"/>
                                                 <constraint firstItem="YzR-G8-Ezk" firstAttribute="top" secondItem="S48-JW-ZGP" secondAttribute="bottom" constant="15" id="czl-T0-s6x"/>
+                                                <constraint firstItem="jX3-0u-jnm" firstAttribute="leading" secondItem="kGQ-VE-HwD" secondAttribute="leading" constant="15" id="eBv-nc-cXW"/>
                                                 <constraint firstItem="S48-JW-ZGP" firstAttribute="top" secondItem="kGQ-VE-HwD" secondAttribute="topMargin" constant="15" id="egx-YP-ij3"/>
                                                 <constraint firstItem="jX3-0u-jnm" firstAttribute="top" secondItem="YzR-G8-Ezk" secondAttribute="bottom" constant="28" id="p4L-4A-2bd"/>
                                                 <constraint firstAttribute="trailing" secondItem="jX3-0u-jnm" secondAttribute="trailing" constant="15" id="quT-uO-abF"/>
