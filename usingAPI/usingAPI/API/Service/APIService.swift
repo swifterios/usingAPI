@@ -22,8 +22,7 @@ class APIService {
     
     func getPosts(completion: @escaping (Posts) -> Void) {
         var urlComponents = self.urlComponents
-        urlComponents.path = APIType.getCommentsByPostId.path
-        
+        urlComponents.path = APIType.getPosts.path
         
         let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
             if let data = data,
