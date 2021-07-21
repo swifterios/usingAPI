@@ -11,11 +11,21 @@ class APIService {
     
     static let shared = APIService()
     
-    func getPosts(completion: @escaping (Posts) -> Void) {
-
-        let request = APIType.getPosts.url
+    var urlComponents: URLComponents {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = APIType.defaultValues.scheme
+        urlComponents.host = APIType.defaultValues.host
         
-        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
+        return urlComponents
+    }
+    
+    
+    func getPosts(completion: @escaping (Posts) -> Void) {
+        var urlComponents = self.urlComponents
+        urlComponents.path = APIType.getCommentsByPostId.path
+        
+        
+        let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
             if let data = data,
                let posts = try? JSONDecoder().decode(Posts.self, from: data) {
                 completion(posts)
@@ -27,11 +37,12 @@ class APIService {
     }
     
     func getCommentsById(postId: String, completion: @escaping (Comments) -> Void) {
+        var urlComponents = self.urlComponents
+        urlComponents.path = APIType.getCommentsByPostId.path
+        urlComponents.queryItems = [URLQueryItem(name: "postId", value: postId)]
         
-        var request = APIType.getCommentsByPostId.url
         
-        
-        let task = URLSession.shared.dataTask(with: request!) { data, response, error in
+        let task = URLSession.shared.dataTask(with: urlComponents.url!) { data, response, error in
             if let data = data,
                let result = try? JSONDecoder().decode(Comments.self, from: data) {
 
@@ -42,4 +53,6 @@ class APIService {
         }
         task.resume()
     }
+    
+    
 }
